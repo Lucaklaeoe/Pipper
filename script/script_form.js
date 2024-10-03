@@ -5,3 +5,11 @@ const icon = document.getElementById("material-symbols-outlined");
       event.preventDefault();
       icon.classList.toggle('move');
     });
+
+    const maxChars = 255;
+
+    function updateCharCount() {
+        const textarea = document.getElementById('text');
+        const remainingChars = maxChars - textarea.value.length;
+        document.getElementById('countdown').textContent = remainingChars;
+    }

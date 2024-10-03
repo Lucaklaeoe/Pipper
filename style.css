@@ -137,7 +137,18 @@ form input{
     font-family: var(--font);
     padding: 5px;
 }
+form textarea{
+    border: var(--border);
+    border-radius: var(--border_radius);
+    color: var(--text_color_pip);
+    font-size: var(--text_size_pip);
+    font-family: var(--font);
+    padding: 5px;
+}
 form input::placeholder{
+    font-size: var(--placeholder_text);
+}
+form textarea::placeholder{
     font-size: var(--placeholder_text);
 }
 form img{
@@ -149,10 +160,23 @@ form img{
     top: 0;
 }
 .avatar_input{
-   margin-left:50px;
+   margin-left:65px;
+   margin-top: -20px;
+   margin-bottom: 30px;
+}
+.avatar_input input{
+    width: 450px;
 }
 .text_input{
-    margin-left:50px;
+    margin-left:65px;
+}
+.text_input textarea{
+    width: 450px;
+    height: 200px;
+    max-width: 450px;
+    max-height: 200px;
+    min-width: 450px;
+    min-height: 200px;
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -164,6 +188,7 @@ form img{
     transition: transform 1.5s ease;
     z-index: -1;
     bottom: 40px;
+    margin-left: 65px;
 }
 .submit{
     background-color:var(--color_elements);
@@ -173,6 +198,11 @@ form img{
     padding: 5px;
     border-radius: var(--border_radius);
     margin-top: 20px;
+    margin-left: 65px;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .submit:hover{
     background-color:var(--color_elements_hover);

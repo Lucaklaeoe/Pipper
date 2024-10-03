@@ -53,7 +53,8 @@
                 <div class="text_input">
                     <label for="title"></label>
                     <p>Write a new message</p>
-                    <input class="text" type="text" id="text" name="text" placeholder="Write your message here">
+                    <textarea class="text" type="text" id="text" name="text" placeholder="Write your message here" oninput="updateCharCount()" maxlength="255"></textarea>
+                    <p>Du har <span id="countdown">255</span> tegn tilbage.</p>
                 </div>
             
             <span class="material-symbols-outlined" id="material-symbols-outlined">
