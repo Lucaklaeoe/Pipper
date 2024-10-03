@@ -22,10 +22,41 @@
     catch(PDOException $e) {
         //fejlbesked
         echo "Connection failed: " . $e->getMessage();
+        exit;
     }
 
-    if($requestMethod == "GET") {
+    //look at the url
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri = explode( '/', $uri )[1];
+    $uri = strtolower($uri);
 
+    if($requestMethod == "GET") {
+        if($uri == "user") {
+            echo json_encode(Getdata($conn, "ID, name, avatar"));
+        }
+        else if($uri == "data") {
+            echo json_encode(Getdata($conn, ""));
+        }
+        else {
+            echo json_encode(Getdata($conn, ""));
+        }
+    }
+
+
+    function Getdata(mixed $conn, string $colums) {
+        if($colums == null || $colums == "") {
+            $sql = "SELECT * FROM pipper_data";
+        }
+        else{
+            $sql = "SELECT $colums FROM pipper_data";
+        }
+        
+        $statement = $conn->prepare($sql);
+
+        $statement->execute();
+        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $results;
     }
 
 ?>
