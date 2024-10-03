@@ -1,4 +1,0 @@
-<?php
-    putenv('PASSWORD=YOUR_PASSWORD_HERE');
-?>
-//remeber to rename file to ".env" and remove this comment

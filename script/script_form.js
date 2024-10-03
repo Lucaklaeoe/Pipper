@@ -13,3 +13,19 @@ const icon = document.getElementById("material-symbols-outlined");
         const remainingChars = maxChars - textarea.value.length;
         document.getElementById('countdown').textContent = remainingChars;
     }
+
+    function updateCharCount() {
+        const textarea = document.getElementById('name');
+        const remainingChars = maxChars - textarea.value.length;
+    }
+    
+
+     // Funktion til at åbne/lukke dropdown
+     function toggleDropdown() {
+        var dropdownContent = document.getElementById("myDropdown");
+        if (dropdownContent.style.display === "flex") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "flex";
+        }
+    }

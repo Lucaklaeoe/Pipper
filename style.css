@@ -19,6 +19,7 @@ body{
     --color_border: #333;
     --color_elements: #40cb24;
     --color_elements_hover: #36ad1f;
+    --color_background: #f1fcef;
 
     /* Text */
     --text_color: white;
@@ -116,6 +117,7 @@ aside ul li a{
 form{
     display: flex;
     flex-direction: column;
+    background-color: var(--color_background);
     color: var(--text_color_pip);
     font-size: var(--text_size_pip);
     font-family: var(--font);
@@ -124,7 +126,6 @@ form{
     margin: 20px;
     margin-top: 150px;
     margin-left: 30%;
-    padding: 40px;
     width: 40%;
     height: fit-content;
     position: relative;
@@ -151,7 +152,7 @@ form input::placeholder{
 form textarea::placeholder{
     font-size: var(--placeholder_text);
 }
-form img{
+form .dropdown img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -159,16 +160,16 @@ form img{
     left: 0;
     top: 0;
 }
-.avatar_input{
-   margin-left:65px;
+.name_input{
+   margin-left:95px;
    margin-top: -20px;
    margin-bottom: 30px;
 }
-.avatar_input input{
+.name_input input{
     width: 450px;
 }
 .text_input{
-    margin-left:65px;
+    margin-left:95px;
 }
 .text_input textarea{
     width: 450px;
@@ -188,7 +189,7 @@ form img{
     transition: transform 1.5s ease;
     z-index: -1;
     bottom: 40px;
-    margin-left: 65px;
+    margin-left: 95px;
 }
 .submit{
     background-color:var(--color_elements);
@@ -198,11 +199,12 @@ form img{
     padding: 5px;
     border-radius: var(--border_radius);
     margin-top: 20px;
-    margin-left: 65px;
+    margin-left: 95px;
     padding-left:50px;
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 450px;
 }
 .submit:hover{
     background-color:var(--color_elements_hover);
@@ -211,3 +213,37 @@ form img{
 .material-symbols-outlined.move {
     transform: translateX(1000px);
   }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown button {
+    margin-bottom: 60px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    height: fit-content;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    position: relative;
+
+}
+
+.dropdown-content img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
