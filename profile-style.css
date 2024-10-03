@@ -4,7 +4,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-
+    font-family: var(--font);
 }
 html{
     overflow-x: hidden ;
@@ -24,10 +24,15 @@ body{
     --color_tweetbg:#eeeeee;
 
     /* Text */
-    --text_color: white;
-    --text_color_hover: #c7c7c7;
-    --text_size_standard: 1.2em;
-    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   /* Text */
+   --text_color: white;
+   --text_color_pip: black;
+   --text_color_hover: #c7c7c7;
+   --text_size_standard: 1.2em;
+   --text_size_pip: 1em;
+   --placeholder_text:0.8em;
+   --text_title: 2em;
+   --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /* nav */
 aside{
@@ -43,7 +48,7 @@ aside{
 aside ul{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
 }
 aside ul li{
     display: flex;
@@ -94,9 +99,6 @@ aside ul li a{
 
 .profile-middle {
   flex: 2;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
-  padding: 20px;
 }
 
 .profile-header {
@@ -112,7 +114,7 @@ aside ul li a{
 .profile-info {
   display: flex;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .profile-picture {
@@ -120,7 +122,7 @@ aside ul li a{
   height: 100px;
   border-radius: 50%;
   margin-right: 20px;
-  border: 3px solid #333;
+  border: 3px solid var(--color_standard);
 }
 
 .profile-details h2 {
@@ -134,17 +136,83 @@ aside ul li a{
 
 .profile-tweets .tweet {
   padding: 15px;
-  margin: 10px 0;
+  margin: 10px;
   background-color:var(--color_tweetbg);
   border-radius: 10px;
 }
 
 .profile-right {
-  flex: 1;
-  padding: 20px;
-  background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+    background: var(--color_bg);
 }
 
+.friends-section, .trending-section {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.friend-suggestion-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px; 
+    border-bottom: 1px solid #ddd;
+}
+
+.friend-suggestion-box:last-child {
+    border-bottom: none;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.name {
+    font-size: 0.95em; 
+    margin: 0;
+}
+
+.handle {
+    color: #555;
+    font-size: 0.85em; 
+    margin: 0;
+}
+
+.follow-btn {
+    padding: 10px 18px; 
+    background-color: var(--color_elements);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85em; 
+}
+.follow-btn:hover {
+    cursor: pointer;
+    background-color: var(--color_elements_hover);
+}
+.trending-tweet {
+    padding: 8px 0;
+}
+
+.hashtag {
+    font-size: 0.95em; 
+    color: var(--color_elements);
+    margin: 0 0 3px 0; 
+}
+
+.tweet-content {
+    font-size: 0.85em;
+    margin: 0;
+    color: #333;
+}
+
+/*
 .suggestions,
 .trending {
   margin-bottom: 20px;
@@ -170,8 +238,8 @@ aside ul li a{
   border-top: 1px solid #333;
 }
 
-.suggestions .account:hover,
-.trending .trend:hover {
-  background-color: #222;
-  cursor: pointer;
+.account-image {
+width: 50px;
+border-radius: 50%;
 }
+ */
