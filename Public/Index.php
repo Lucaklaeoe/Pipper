@@ -83,10 +83,10 @@
         $input = (array) json_decode(file_get_contents("php://input"), TRUE);
 
         //requierments
-        if(!isset($input['name']) || $input['name'] == "") {
+        if(!isset($input['name']) || trim($input['name']," ") == "") {
             return "name is requied";
         }
-        if(!isset($input['content']) || $input['content'] == "") {
+        if(!isset($input['content']) || trim($input['content']," ") == "") {
             return "content is requied";
         }
 

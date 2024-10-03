@@ -1,0 +1,245 @@
+/*styles*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+html{
+    overflow-x: hidden ;
+}
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    /* Color */
+    --color_standard: #0d1117; 
+    --color_standard_hover: #121821;
+    --color_border: #333;
+    --color_elements: #40cb24;
+    --color_elements_hover: #36ad1f;
+    --color_bg:#eeeeee;
+    --color_tweetbg:#eeeeee;
+
+    /* Text */
+   /* Text */
+   --text_color: white;
+   --text_color_pip: black;
+   --text_color_hover: #c7c7c7;
+   --text_size_standard: 1.2em;
+   --text_size_pip: 1em;
+   --placeholder_text:0.8em;
+   --text_title: 2em;
+   --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* nav */
+aside{
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    background: var(--color_standard);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+
+}
+aside ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 20px;
+    border-radius: 40px;
+    padding: 10px 50px;
+}
+aside ul li:hover{
+    background: var(--color_standard_hover);
+}
+aside ul li a{
+    text-decoration: none;
+    color: var(--text_color);
+    font-size: var(--text_size_standard);
+    font-family: var(--font);
+}
+.navbaricon{
+    width: 24px;
+    height: 24px;
+}
+.navbaricon path{
+    fill: var(--text_color);
+}
+.make_a_pipe{
+    background: var(--color_elements);
+}
+.make_a_pipe:hover{
+    background: var(--color_elements_hover);
+    cursor: pointer;
+}
+.make_a_pipe h5{
+    color: var(--text_color);
+    font-size: var(--text_size_standard);
+    font-family: var(--font);
+}
+
+/* profile */
+.profile-page {
+  display: flex;
+  position: relative;
+  left: 30%; /* Align next to the sidebar */
+  width: 70%; /* Fills the remaining space */
+  height: 100vh;
+}
+
+.profile-middle {
+  flex: 2;
+}
+
+.profile-header {
+  position: relative;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid var(--color_standard);
+}
+
+.profile-details h2 {
+  font-size: 24px;
+}
+
+.profile-details p {
+  font-size: 16px;
+  color: #888;
+}
+
+.profile-tweets .tweet {
+  padding: 15px;
+  margin: 10px;
+  background-color:var(--color_tweetbg);
+  border-radius: 10px;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin: 0 auto;
+    background: var(--color_bg);
+}
+
+.friends-section, .trending-section {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.friend-suggestion-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px; 
+    border-bottom: 1px solid #ddd;
+}
+
+.friend-suggestion-box:last-child {
+    border-bottom: none;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.name {
+    font-size: 0.95em; 
+    margin: 0;
+}
+
+.handle {
+    color: #555;
+    font-size: 0.85em; 
+    margin: 0;
+}
+
+.follow-btn {
+    padding: 10px 18px; 
+    background-color: var(--color_elements);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.85em; 
+}
+.follow-btn:hover {
+    cursor: pointer;
+    background-color: var(--color_elements_hover);
+}
+.trending-tweet {
+    padding: 8px 0;
+}
+
+.hashtag {
+    font-size: 0.95em; 
+    color: var(--color_elements);
+    margin: 0 0 3px 0; 
+}
+
+.tweet-content {
+    font-size: 0.85em;
+    margin: 0;
+    color: #333;
+}
+
+/*
+.suggestions,
+.trending {
+  margin-bottom: 20px;
+}
+
+.suggestions h3,
+.trending h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.suggestions {
+  border-bottom: 1px solid #333;
+}
+
+.trending {
+  border-bottom: 1px solid #333;
+}
+
+.suggestions .account,
+.trending .trend {
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+.account-image {
+width: 50px;
+border-radius: 50%;
+}
+ */
