@@ -1,0 +1,56 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+.avatar_overskrift{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.avatar{
+    width: 70px;
+    border-radius: 50%;
+    border: solid black 1px;
+}
+.overskrift{
+    font-size: 30px;
+    font-weight: 800;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.icons div{
+    display: flex;
+    gap: 5px;
+}
+.content{
+    margin-bottom: 20px;
+}
+.timestamp{
+    margin: 10px 0 -15px 0;
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
