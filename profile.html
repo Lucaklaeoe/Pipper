@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profile-style.css">
+    
     <title>Profile</title>
 </head>
 
@@ -14,22 +15,22 @@
                 <svg class="navbaricon" viewBox="0 0 24 24" id="home">
                     <path class="navbaricon" d="M6.64373233,18.7821107 L6.64373233,15.7152449 C6.64371685,14.9380902 7.27567036,14.3067075 8.05843544,14.3018198 L10.9326107,14.3018198 C11.7188748,14.3018198 12.3562677,14.9346318 12.3562677,15.7152449 L12.3562677,15.7152449 L12.3562677,18.7732212 C12.3562498,19.4472781 12.9040221,19.995083 13.5829406,20 L15.5438266,20 C16.4596364,20.0023291 17.3387522,19.6427941 17.9871692,19.0007051 C18.6355861,18.3586161 19,17.4867541 19,16.5775231 L19,7.86584638 C19,7.13138763 18.6720694,6.43471253 18.1046183,5.96350064 L11.4429783,0.674268354 C10.2785132,-0.250877524 8.61537279,-0.22099178 7.48539114,0.745384082 C7.48539114,0.745384082 0.967012253,5.96350064 0.967012253,5.96350064 C0.37274068,6.42082162 0.0175522924,7.11956262 0,7.86584638 L0,16.5686336 C0,18.463707 1.54738155,20 3.45617342,20 L5.37229029,20 C5.69917279,20.0023364 6.01348703,19.8750734 6.24547302,19.6464237 C6.477459,19.417774 6.60792577,19.1066525 6.60791706,18.7821107 L6.64373233,18.7821107 Z" transform="translate(2.5 2)"></path>
                 </svg>
-                <a href="#">Home</a>
+                <a href="./index.html">Home</a>
             </li>
             <li>
                 <svg class="navbaricon" viewBox="0 0 24 24" id="search">
                       <path d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"></path>
                   </svg>
-                <a href="#">Explore</a>
+                <a href="./explore.html">Explore</a>
             </li>
             <li>
                 <svg class="navbaricon" viewBox="0 0 32 32" id="people">
                     <path d="M16,13.29A6.15,6.15,0,1,0,9.86,7.14,6.15,6.15,0,0,0,16,13.29ZM16,3a4.15,4.15,0,1,1-4.14,4.14A4.15,4.15,0,0,1,16,3ZM27.38,26.81C26.18,29.9,20.72,31,16,31S5.82,29.9,4.62,26.81c-.64-1.65-.07-4.1,1.49-6.39A12.11,12.11,0,0,1,16,15a12.24,12.24,0,0,1,10.91,7.25,1,1,0,1,1-1.82.81A10.37,10.37,0,0,0,16,17a10.09,10.09,0,0,0-8.23,4.55c-1.34,1.95-1.61,3.72-1.29,4.54C7.14,27.78,11.14,29,16,29s8.86-1.22,9.52-2.91a1,1,0,0,1,1.86.72Z"></path>
                   </svg>
-                <a href="#">Profile</a>
+                <a href="./profile.html">Profile</a>
             </li>
             <li class="make_a_pipe">
-                <h5>Make a pipe</h5>
+                <a href="./newpip.html"><h5>Make a pipe</h5></a>
             </li>
         </ul>
     </aside>
@@ -51,7 +52,29 @@
       <div class="profile-tweets">
         <!-- Sample Tweet -->
         <div class="tweet">
-          <p>This is a sample tweet on the profile page.</p>
+            <form>
+                <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Brian"
+                    alt="avatar" />
+                    <div class="avatar_input">
+                        <label for="avatar"></label>
+                        <p>Add an avatar</p>
+                        <input type="avatar" id="avatar" name="avatar" placeholder="Your avatar">
+                    </div>
+                    <div class="text_input">
+                        <label for="title"></label>
+                        <p>Write a new message</p>
+                        <textarea class="text" type="text" id="text" name="text" placeholder="Write your message here" oninput="updateCharCount()" maxlength="255"></textarea>
+                        <p>Du har <span id="countdown">255</span> tegn tilbage.</p>
+                    </div>
+                
+                <span class="material-symbols-outlined" id="material-symbols-outlined">
+                    mail
+                </span>
+                <button class="submit" id="submit">Send</button>
+            </form>
+
+            <script src="./script/script_form.js"></script>
         </div>
       </div>
     </div>
@@ -115,4 +138,22 @@
     </div>
   </div>
 </body>
+
+<script>
+document.querySelectorAll(".follow-btn").forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("followed");
+        if (this.classList.contains("followed")) {
+            this.textContent = "Followed";
+            this.style.backgroundColor = "var(--color_elements_hover)"; 
+            this.style.fontWeight = "600";
+        } else {
+            this.textContent = "Follow";
+            this.style.backgroundColor = ""; 
+            this.style.fontWeight = "normal";
+        }
+    });
+});
+
+</script>
 </html>
