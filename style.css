@@ -50,7 +50,7 @@ aside{
     align-items: flex-start;
     padding: 40px;
 }
-.rigth{
+.right{
     position: fixed;
     width: 25%;
     height: 100vh;
@@ -73,7 +73,7 @@ aside ul li{
     height: fit-content;
     gap: 20px;
     border-radius: 40px;
-    padding: 10px 50px;
+    padding: 20px 50px;
 }
 aside ul li:hover{
     background: var(--color_standard_hover);
