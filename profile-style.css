@@ -57,7 +57,7 @@ aside ul li{
     height: fit-content;
     gap: 20px;
     border-radius: 40px;
-    padding: 25px 50px;
+    padding: 20px 30px;
 }
 aside ul li:hover{
     background: var(--color_standard_hover);
@@ -152,6 +152,7 @@ aside ul li a{
     display: flex;
     flex-direction: column;
     max-width: 350px;
+    height:150vh;
     margin: 0 auto;
     background: var(--color_bg);
 }
@@ -229,7 +230,7 @@ aside ul li a{
 /* Form */
 
 form {
-display: flex;
+  display: flex;
   flex-direction: column;
   color: var(--text_color_pip);
   font-size: var(--text_size_pip);
@@ -238,7 +239,7 @@ display: flex;
   border-radius: var(--border_radius);
   padding: 20px;
   margin-top: 20px;
-  width: 300px;
+  width: 100%;
   height: fit-content;
   position: relative;
 
@@ -267,8 +268,7 @@ form textarea::placeholder{
   font-size: var(--placeholder_text);
 }
 form img{
-  width: 100px;
-  height: 100px;
+  width: 75px;
   border-radius: 50%;
   position: absolute;
   left: 0;
