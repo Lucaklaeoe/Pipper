@@ -20,7 +20,6 @@ body{
     --color_elements: #40cb24;
     --color_elements_hover: #24930e;
     --color_bg:#eeeeee;
-    --color_tweetbg:#eeeeee;
 
    /* Text */
    --text_color: white;
@@ -78,8 +77,9 @@ aside ul li a{
 }
 .make_a_pipe{
     background: var(--color_elements);
+    padding:20px 60px;
 }
-.make_a_pipe:hover{
+li > .make_a_pipe:hover{
     background: var(--color_elements_hover);
     cursor: pointer;
 }
@@ -95,15 +95,15 @@ aside ul li a{
 
 /* Profile - Middle Section*/
 .profile-page {
-  display: flex;
-  position: relative;
-  left: 30%; 
-  width: 70%;
-  height: 100vh;
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
 .profile-middle {
-  flex: 2;
+    width: 50%;
+    background-color: #fff;
+    overflow-y: auto;
 }
 
 .profile-header {
@@ -139,21 +139,23 @@ aside ul li a{
   color: #888;
 }
 
-.profile-tweets .tweet {
+.profile-tweets{
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+  }
+
+.tweet {
   padding: 15px;
   margin: 10px;
-  background-color:var(--color_tweetbg);
+  background-color:var(--color_bg);
   border-radius: 10px;
 }
 
 /* Profile - Right Section*/
 
 .profile-right {
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-    height:150vh;
-    margin: 0 auto;
+    width: 25%;
+    padding: 20px;
     background: var(--color_bg);
 }
 
@@ -227,118 +229,104 @@ aside ul li a{
     color: #333;
 }
 
-/* Form */
 
+/* Form Styling */
 form {
-  display: flex;
-  flex-direction: column;
-  color: var(--text_color_pip);
-  font-size: var(--text_size_pip);
-  font-family: var(--font);
-  border: var(--border);
-  border-radius: var(--border_radius);
-  padding: 20px;
-  margin-top: 20px;
-  width: 100%;
-  height: fit-content;
-  position: relative;
-
+    display: flex;
+    flex-direction: column;
+    color: var(--text_color_pip);
+    font-size: var(--text_size_pip);
+    font-family: var(--font);
+    border: 1px solid var(--color_border);
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color_bg);
 }
 
-form input{
-  border: var(--border);
-  border-radius: var(--border_radius);
-  color: var(--text_color_pip);
-  font-size: var(--text_size_pip);
-  font-family: var(--font);
-  padding: 5px;
+/* Input and Textarea Styling */
+form input,
+form textarea {
+    border: 1px solid var(--color_border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: var(--text_size_pip);
+    width: 100%;
+    margin-bottom: 10px;
 }
-form textarea{
-  border: var(--border);
-  border-radius: var(--border_radius);
-  color: var(--text_color_pip);
-  font-size: var(--text_size_pip);
-  font-family: var(--font);
-  padding: 5px;
+
+form input::placeholder,
+form textarea::placeholder {
+    font-size: var(--placeholder_text);
 }
-form input::placeholder{
-  font-size: var(--placeholder_text);
+
+/* Profile Picture */
+form img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
-form textarea::placeholder{
-  font-size: var(--placeholder_text);
+
+/* Avatar Input Section */
+.avatar_input {
+    margin-bottom: 20px;
+   
 }
-form img{
-  width: 75px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
+.avatar_input p{
+  
+    padding-bottom:5px;
 }
-.avatar_input{
- margin-left:65px;
- margin-top: -20px;
- margin-bottom: 30px;
+
+/* Textarea for Tweet */
+.text_input {
+    display: flex;
+    flex-direction: column;
 }
-.avatar_input input{
-  width: 450px;
+
+.text_input textarea {
+    height: 150px;
+    resize: none;
 }
-.text_input{
-  margin-left:65px;
+
+/* Submit Button */
+.submit {
+    background-color: var(--color_elements);
+    color: var(--text_color);
+    font-size: var(--text_size_standard);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.text_input textarea{
-  width: 450px;
-  height: 200px;
-  max-width: 450px;
-  max-height: 200px;
-  min-width: 450px;
-  min-height: 200px;
+
+.submit:hover {
+    background-color: var(--color_elements_hover);
 }
+
+/* Icon Styling */
 .material-symbols-outlined {
-font-variation-settings:
-'FILL' ,
-'wght' 400,
-'GRAD' 0,
-'opsz' 40;
-  position: absolute;
-  transition: transform 1.5s ease;
-  z-index: -1;
-  bottom: 40px;
-  margin-left: 65px;
-}
-.submit{
-  background-color:var(--color_elements);
-  color: var(--text_color);
-  font-size: var(--text_size_standard);
-  font-family: var(--font);
-  padding: 5px;
-  border-radius: var(--border_radius);
-  margin-top: 20px;
-  margin-left: 65px;
-  padding-left:50px;
-  padding-right: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.submit:hover{
-  background-color:var(--color_elements_hover);
-  cursor: pointer;
-}
-.material-symbols-outlined.move {
-  transform: translateX(1000px);
+    font-size: 1.5em;
+    color: var(--color_elements);
+    margin-right: 10px;
+    cursor: pointer;
 }
 
+.material-symbols-outlined:hover {
+    color: var(--color_elements_hover);
+}
 
 
 
 /* Sidebar Nav */
 .nav-left {
-  position: fixed;
-  width: 25%;
-  height: 100vh;
-  background: var(--color_standard);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+    width: 25%;
+    background: var(--color_standard);
+    color: white;
+    padding: 20px;
+
   padding: 40px;
 }
 .nav-left ul{
