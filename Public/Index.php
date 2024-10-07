@@ -55,7 +55,7 @@
     function Getdata(mixed $conn, string $uri) {
         //hvis du kun vil havde noget specifikt data
         if($uri == null || $uri == "") {
-            $sql = "SELECT * FROM pipper_data";
+            $sql = "SELECT * FROM pipper_data ORDER BY created_at ASC";
         }
         else{
             $sql = "SELECT * FROM pipper_data Where name LIKE" . " '%" . $uri . "%'";
