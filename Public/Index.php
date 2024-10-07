@@ -83,15 +83,15 @@
         $input = (array) json_decode(file_get_contents("php://input"), TRUE);
 
         //requierments
-        if(!isset($input['name']) || trim($input['name']," ") == "") {
-            return "name is requied";
+        if(!isset($input['name']) || trim($input['name']," ") == "" || strlen($input['content']) > 150) {
+            return "name is requied or is too long";
         }
-        if(!isset($input['content']) || trim($input['content']," ") == "") {
-            return "content is requied";
+        if(!isset($input['content']) || trim($input['content']," ") == "" || strlen($input['content']) > 255) {
+            return "content is requied or is too long";
         }
 
         //fail safe
-        if(!isset($input['avatar'])) {
+        if(!isset($input['avatar']) || strlen($input['content']) > 255) {
             $input['avatar'] = "";
         }
         if(!isset($input['created_at']) || $input['created_at'] == "") {
@@ -154,7 +154,7 @@
         }
 
         //fail safe
-        if(!isset($input['avatar'])) {
+        if(!isset($input['avatar']) || trim($input['avatar']," ") == "" || strlen($input['content']) > 255) {
             $input['avatar'] = $results[0]['avatar'];
             $has_something_changed++;
         }
@@ -167,7 +167,7 @@
             $input['like_count'] = $results[0]['like_count']; 
             $has_something_changed++;
         }
-        if(!isset($input['content']) || $input['content'] == "") {
+        if(!isset($input['content']) || trim($input['content']," ") == "" || strlen($input['content']) > 255) {
             $input['content'] = $results[0]['content'];
             $has_something_changed++;
         }
