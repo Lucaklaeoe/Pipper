@@ -21,7 +21,7 @@ body{
     --color_border: #333;
     --color_elements: #40cb24;
     --color_elements_hover: #36ad1f;
-    --color_background: #f1fcef;
+    --color_background: #ffffff;
 
     /* Text */
     --text_color: white;
@@ -37,6 +37,7 @@ body{
     /* Border */
     --border_radius: 5px;
     --border: 2px solid white;
+    --border_black: 2px solid black;
 }
 aside{
     position: fixed;
@@ -124,6 +125,7 @@ form{
     margin-top: 150px;
     
     width: 40%;
+    padding-top: 40px;
     height: fit-content;
     position: relative;
 }  
@@ -158,15 +160,18 @@ form .dropdown img{
     top: 0;
 }
 .name_input{
-   margin-left:95px;
-   margin-top: -20px;
+   margin-left:110px;
    margin-bottom: 30px;
+}
+.name{
+    border: var(--border_black);
+    border-radius: var(--border_radius);
 }
 .name_input input{
     width: 450px;
 }
 .text_input{
-    margin-left:95px;
+    margin-left:110px;
 }
 .text_input textarea{
     width: 450px;
@@ -175,6 +180,10 @@ form .dropdown img{
     max-height: 200px;
     min-width: 450px;
     min-height: 200px;
+}
+.text{
+    border: var(--border_black);
+    border-radius: var(--border_radius);
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -186,7 +195,7 @@ form .dropdown img{
     transition: transform 1.5s ease;
     z-index: -1;
     bottom: 40px;
-    margin-left: 95px;
+    margin-left: 110px;
 }
 .submit{
     background-color:var(--color_elements);
@@ -196,7 +205,7 @@ form .dropdown img{
     padding: 5px;
     border-radius: var(--border_radius);
     margin-top: 20px;
-    margin-left: 95px;
+    margin-left: 110px;
     margin-bottom: 30px;
     padding-left:50px;
     padding-right: 50px;
@@ -213,6 +222,7 @@ form .dropdown img{
   }
 
 .dropdown {
+    margin-top: -20px; ;
     position: relative;
     display: inline-block;
 }
@@ -225,9 +235,11 @@ form .dropdown img{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     height: fit-content;
     z-index: 1;
+    border: var(--border_black);
+    border-radius: var(--border_radius);
 }
 
 .dropdown-content a {
@@ -246,7 +258,19 @@ form .dropdown img{
     margin: 0 auto;
 }
 
-main, .Posts{
+.avatar-1{
+    margin-top: 80px;
+}
+.avatar-1:hover{
+    background-color: var(--color_elements_hover);
+}
+.avatar-2:hover{
+    background-color: var(--color_elements_hover);
+}
+.avatar-3:hover{
+    background-color: var(--color_elements_hover);
+}
+main, #Posts{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,8 +322,9 @@ main, .Posts{
 .icons div svg{
     color: var(--text_color);
     fill: var(--text_color);
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
     position: relative;
 }
 .icons div svg path{
