@@ -18,12 +18,14 @@ const icon = document.getElementById("material-symbols-outlined");
     }
     
 
-     // Funktion til at åbne/lukke dropdown
+    // Funktion til at åbne/lukke dropdown
+    const dropdownContent = document.getElementById("myDropdown");
+
      function toggleDropdown() {
-        var dropdownContent = document.getElementById("myDropdown");
-        if (dropdownContent.style.display === "flex") {
+        if (dropdownContent.style.display == "flex") {
             dropdownContent.style.display = "none";
-        } else {
+        } 
+        else {
             dropdownContent.style.display = "flex";
         }
     }
