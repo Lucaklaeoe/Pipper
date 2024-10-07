@@ -7,16 +7,14 @@ const icon = document.getElementById("material-symbols-outlined");
     });
 
     const maxChars = 255;
+    const textarea = document.getElementById('text');
+    textarea.addEventListener('input', updateCharCount);
+    const countdown = document.getElementById('countdown');
 
     function updateCharCount() {
-        const textarea = document.getElementById('text');
+        
         const remainingChars = maxChars - textarea.value.length;
-        document.getElementById('countdown').textContent = remainingChars;
-    }
-
-    function updateCharCount() {
-        const textarea = document.getElementById('name');
-        const remainingChars = maxChars - textarea.value.length;
+        countdown.textContent = remainingChars;
     }
     
 
@@ -34,14 +32,14 @@ const icon = document.getElementById("material-symbols-outlined");
         event.preventDefault();
     
         const name = document.getElementById("name").value;
-        const content = document.getElementById("content").value;
+        const content = document.getElementById("text").value;
         
         const data = {
             name: name,
-            content: content,
+            content: content
     
         };
-        const url = "http://localhost:8000/newpip";
+        const url = "http://localhost:8000";
         const options = {
             method: "POST",
             headers: {
@@ -51,9 +49,9 @@ const icon = document.getElementById("material-symbols-outlined");
         };
         
         const response = await fetch(url, options)
-        const cat = await response.json();
+        const pipper_data = await response.json();
         
-        console.log(newpiper_data);
+        console.log(pipper_data);
         console.log("Det fucking virker!");
         
     })
