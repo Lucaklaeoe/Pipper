@@ -28,7 +28,7 @@ const icon = document.getElementById("material-symbols-outlined");
         }
     }
 
-    document.getElementById("form_new_post").addEventListener("submit", async (event) => {
+    document.getElementById("submit").addEventListener("click", async (event) => {
         event.preventDefault();
     
         const name = document.getElementById("name").value;
@@ -39,19 +39,27 @@ const icon = document.getElementById("material-symbols-outlined");
             content: content
     
         };
-        const url = "http://localhost:8000";
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        };
+        try{
+            console.log(data)
+            const url = "http://localhost:8000";
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            };
+
+            const response = await fetch(url, options)
+            const pipper_data = await response.json();
+
+            console.log(pipper_data);
+            console.log("Det fucking virker!");
+        }
+        catch(error) {
+            console.log(error);
+        }
         
-        const response = await fetch(url, options)
-        const pipper_data = await response.json();
         
-        console.log(pipper_data);
-        console.log("Det fucking virker!");
         
     })

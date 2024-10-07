@@ -32,14 +32,11 @@
 
     //call the right function
     if($requestMethod == "GET") {
-        if($uri == "user") {
-            echo json_encode(Getdata($conn, "ID, name, avatar"));
-        }
-        else if($uri == "data") {
+        if($uri == "data") {
             echo json_encode(Getdata($conn, ""));
         }
         else {
-            echo json_encode(Getdata($conn, ""));
+            echo json_encode(Getdata($conn, $uri));
         }
     }
     else if($requestMethod == "POST") {
@@ -55,13 +52,13 @@
     //Getdata function
     //needs connection
     //obtional colums
-    function Getdata(mixed $conn, string $colums) {
+    function Getdata(mixed $conn, string $uri) {
         //hvis du kun vil havde noget specifikt data
-        if($colums == null || $colums == "") {
+        if($uri == null || $uri == "") {
             $sql = "SELECT * FROM pipper_data";
         }
         else{
-            $sql = "SELECT $colums FROM pipper_data";
+            $sql = "SELECT * FROM pipper_data Where name LIKE" . " '%" . $uri . "%'";
         }
         
         //try to get data
@@ -83,7 +80,7 @@
         $input = (array) json_decode(file_get_contents("php://input"), TRUE);
 
         //requierments
-        if(!isset($input['name']) || trim($input['name']," ") == "" || strlen($input['content']) > 150) {
+        if(!isset($input['name']) || trim($input['name']," ") == "" || strlen($input['content']) > 150 || $input['name'] == "data") {
             return "name is requied or is too long";
         }
         if(!isset($input['content']) || trim($input['content']," ") == "" || strlen($input['content']) > 255) {

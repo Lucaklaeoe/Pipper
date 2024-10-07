@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script/script_get_profile.js" async></script>
     <title>Pipper</title>
 </head>
 <body>
@@ -36,6 +37,28 @@
     <aside class="right">
     </aside>
 
+    <template id="post_template">
+        <div class="post">
+            <div class="avatar_overskrift">
+                <img class="avatar" src="https://api.dicebear.com/5.x/adventurer/svg?seed=Brian" alt="avatar" />
+                <p class="overskrift"></p>
+            </div>
+            <p class="content"></p>
+            <div class="icons">
+                <div> <p>Heart icon</p>     <p class="likes"></p></div>
+                <div> <p>Comments icon</p>  <p></p></div>
+                <div> <p>Repost icon</p>    <p></p></div>
+            </div>
+            <p class="timestamp"></p>
+        </div>
+    </template>
+
+    <main>
+        <input type="text" id="Profile_search" placeholder="Dit navn">
+        <div id="Posts">
+
+        </div>
+    </main>
     
 </body>
 </html>
