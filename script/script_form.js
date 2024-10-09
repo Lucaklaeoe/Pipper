@@ -21,7 +21,7 @@ const icon = document.getElementById("material-symbols-outlined");
     // Funktion til at åbne/lukke dropdown
     const dropdownContent = document.getElementById("myDropdown");
 
-     function toggleDropdown() {
+    function toggleDropdown() {
         if (dropdownContent.style.display == "flex") {
             dropdownContent.style.display = "none";
         } 
@@ -66,7 +66,6 @@ const icon = document.getElementById("material-symbols-outlined");
             const pipper_data = await response.json();
 
             console.log(pipper_data);
-            console.log("Det fucking virker!");
         }
         catch(error) {
             console.log(error);

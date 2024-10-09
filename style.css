@@ -336,6 +336,9 @@ main, #Posts{
 }
 .content{
     margin-bottom: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    font-family: var(--font);
 }
 .other_info{
     display: flex;
