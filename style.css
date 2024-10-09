@@ -186,11 +186,11 @@ form .dropdown img{
     border-radius: var(--border_radius);
 }
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' ,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 40;
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 600,
+      'GRAD' 0,
+      'opsz' 48;
     position: absolute;
     transition: transform 8.5s ease;
     z-index: -1;
@@ -378,10 +378,6 @@ main, #Posts{
     font-size: var(--text_title);
     font-family: var(--font);
     margin-top: 20px;
-    margin-left:30%;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
 
@@ -390,8 +386,4 @@ main, #Posts{
     font-size: var(--text_title);
     font-family: var(--font);
     margin-top: 20px;
-    margin-left:30%;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
