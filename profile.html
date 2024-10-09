@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script/script_get_profile.js" async></script>
+    <script src="script/edit_profile.js" defer></script>
+
     <title>Pipper</title>
 </head>
 <body>
@@ -64,7 +66,10 @@
                     <p>25</p>
                 </div>
             </div>
-            <p class="timestamp"></p>
+            <span class="other_info">
+                <p class="edit" onclick="edit(this)">Rediger</p>
+                <p class="timestamp"></p>
+            </span>
         </div>
     </template>
 
@@ -78,6 +83,5 @@
 
         </div>
     </main>
-    
 </body>
 </html>

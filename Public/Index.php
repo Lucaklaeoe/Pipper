@@ -186,7 +186,14 @@
             'like_count' => 0
         ];
 
-        $sql = "UPDATE pipper_data SET name = '" . $data['name'] . "', avatar = '" . $data['avatar'] . "', content = '" . $data['content'] . "', created_at = '" . $data['created_at'] . "', like_count = '" . $data['like_count'] . "' WHERE ID =" . $data['ID'];
+        $sql = "UPDATE pipper_data 
+        SET name = '" . $data['name'] . "', 
+            avatar = '" . $data['avatar'] . "', 
+            content = '" . $data['content'] . "', 
+            created_at = '" . $data['created_at'] . "', 
+            like_count = '" . $data['like_count'] . "' 
+        WHERE ID = " . $data['ID'];
+
 
         //try to update
         try{
@@ -196,7 +203,6 @@
             //give the pip just created
             $id = $conn->lastInsertId();
             $current_pip = (object) $input;
-            $current_pip->id = $id;
 
             return $current_pip;
         }

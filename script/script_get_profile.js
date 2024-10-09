@@ -34,6 +34,7 @@ async function Getdata(event) {
 
             clon.querySelector(".likes").innerHTML = pip.like_count;
             clon.querySelector(".timestamp").innerHTML = "Last Edit: " + pip.created_at;
+            clon.querySelector(".post").id = pip.ID;
     
             output.appendChild(clon);
         });
