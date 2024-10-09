@@ -352,3 +352,8 @@ main, #Posts{
     font-family: var(--font);
     padding: 5px;
 }
+
+.explore_title{
+    font-size: var(--text_title);
+    font: var(--font_title);
+}
