@@ -192,7 +192,7 @@ form .dropdown img{
   'GRAD' 0,
   'opsz' 40;
     position: absolute;
-    transition: transform 1.5s ease;
+    transition: transform 8.5s ease;
     z-index: -1;
     bottom: 40px;
     margin-left: 110px;
@@ -351,4 +351,9 @@ main, #Posts{
     font-size: var(--text_size_pip);
     font-family: var(--font);
     padding: 5px;
+}
+
+.explore_title{
+    font-size: var(--text_title);
+    font: var(--font_title);
 }
