@@ -30,19 +30,29 @@ const icon = document.getElementById("material-symbols-outlined");
         }
     }
 
+    const current_avatar = document.getElementById("selected_avatar");
+    var old_avatar;
+    function changeavatar(element) {
+        old_avatar = current_avatar.firstChild.src;
+        current_avatar.firstChild.src = element.firstChild.src;
+        element.firstChild.src = old_avatar;
+
+        dropdownContent.style.display = "none";
+    }
+
     document.getElementById("submit").addEventListener("click", async (event) => {
         event.preventDefault();
     
         const name = document.getElementById("name").value;
         const content = document.getElementById("text").value;
+        const avatar = current_avatar.firstChild.src;
         
         const data = {
             name: name,
-            content: content
-    
+            content: content,
+            avatar: avatar
         };
         try{
-            console.log(data)
             const url = "http://localhost:8000";
             const options = {
                 method: "POST",

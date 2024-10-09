@@ -230,6 +230,7 @@ form .dropdown img{
     margin-bottom: 60px;
 }
 .dropdown-content {
+    margin-top: 100px;
     display: none;
     position: absolute;
     flex-direction: column;
@@ -258,9 +259,6 @@ form .dropdown img{
     margin: 0 auto;
 }
 
-.avatar-1{
-    margin-top: 80px;
-}
 .avatar-1:hover{
     background-color: var(--color_elements_hover);
 }
@@ -269,6 +267,9 @@ form .dropdown img{
 }
 .avatar-3:hover{
     background-color: var(--color_elements_hover);
+}
+#selected_avatar{
+    cursor: pointer;
 }
 main, #Posts{
     display: flex;
