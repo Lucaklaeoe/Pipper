@@ -5,6 +5,7 @@ function edit(edit_button){
     const textarea = document.createElement("textarea");
     textarea.value = saved_content.textContent;
     textarea.classList.add("content");
+    textarea.maxLength = "255";
 
     saved_content.parentElement.replaceChild(textarea, saved_content);
 
