@@ -74,3 +74,16 @@ const icon = document.getElementById("material-symbols-outlined");
         
         
     })
+    let currentPosition = 0; // Variabel til at holde styr på den aktuelle position
+
+document.getElementById("submit").addEventListener("click", function () {
+    currentPosition += 800; // Øg positionen med 100px hver gang der klikkes
+    moveIcon();
+});
+
+function moveIcon() {
+    const icon = document.getElementById("material-symbols-outlined");
+
+    // Opdater ikonets position ved at justere transform-værdien
+    icon.style.transform = `translateX(${currentPosition}px)`;
+}
