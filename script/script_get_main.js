@@ -1,7 +1,7 @@
 const template = document.getElementById("post_template");
 const output = document.getElementById("Posts");
 
-
+//gets data from server
 async function Getdata(event) {
 
     const url = "http://localhost:8000/data";

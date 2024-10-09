@@ -2,12 +2,14 @@ const template = document.getElementById("post_template");
 const output = document.getElementById("Posts");
 var search_input = document.getElementById("Profile_search").value;
 
+//saves name to loclal storage
 if (localStorage.getItem("post_content") != null) {
     search_input = localStorage.getItem("post_content");
     document.getElementById("Profile_search").value = search_input;
     Getdata();
 }
 
+//gets data from server with the name from input
 async function Getdata(event) {
     const url = "http://localhost:8000/";
 
@@ -77,6 +79,7 @@ if (search_input === "" || search_input == null) {
     Getdata();
 }
 
+//sets input to local storage and calls Getdata function
 document.getElementById("Profile_search").addEventListener("input", function () {
     search_input = document.getElementById("Profile_search").value;
     if (search_input !== "") {

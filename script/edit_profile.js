@@ -1,3 +1,5 @@
+
+// Edit post / adds buttons and textarea
 function edit(edit_button){
     const saved_content = edit_button.parentElement.parentElement.querySelector(".content");
     const post = saved_content.parentElement;
@@ -18,6 +20,7 @@ function edit(edit_button){
     edit_button.remove();
 }
 
+// Saves post and reload page
 async function save(button){
     const post = button.parentElement.parentElement;
 
@@ -54,6 +57,7 @@ async function save(button){
     location.reload();  
 }
 
+// Deletes post
 async function delete_post(button){
     const post = button.parentElement.parentElement;
 
