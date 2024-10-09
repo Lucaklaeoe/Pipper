@@ -292,6 +292,7 @@ main, #Posts{
     padding: 20px;
     border-radius: 10px;
     width: 500px;
+    position: relative;
 }
 .avatar_overskrift{
     display: flex;
