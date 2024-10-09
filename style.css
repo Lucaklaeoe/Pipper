@@ -351,9 +351,28 @@ main, #Posts{
     font-size: var(--text_size_pip);
     font-family: var(--font);
     padding: 5px;
+    margin-top: 150px;
 }
 
-.explore_title{
+.profile_title{
+    color: var(--text_color_title);
     font-size: var(--text_title);
-    font: var(--font_title);
+    font-family: var(--font);
+    margin-top: 20px;
+    margin-left:30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.explore_title{
+    color: var(--text_color_title);
+    font-size: var(--text_title);
+    font-family: var(--font);
+    margin-top: 20px;
+    margin-left:30%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
