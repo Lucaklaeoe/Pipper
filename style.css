@@ -39,6 +39,12 @@ body{
     --border: 2px solid white;
     --border_black: 2px solid black;
 }
+.logo img{
+    width: 200px;
+    position: absolute;
+    top: -20px;
+    left: -50px;
+}
 aside{
     position: fixed;
     width: 25%;
@@ -63,6 +69,7 @@ aside{
 aside ul{
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 20px;
 }
 aside ul li{
@@ -403,6 +410,7 @@ main, #Posts{
     font-size: var(--text_size_pip);
     font-family: var(--font);
     padding: 5px;
+
 }
 
 .profile_title{
