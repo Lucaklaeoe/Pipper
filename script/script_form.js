@@ -31,6 +31,7 @@ const icon = document.getElementById("material-symbols-outlined");
     }
 
     const current_avatar = document.getElementById("selected_avatar");
+
     var old_avatar;
     function changeavatar(element) {
         old_avatar = current_avatar.firstChild.src;
@@ -50,7 +51,7 @@ const icon = document.getElementById("material-symbols-outlined");
         const data = {
             name: name,
             content: content,
-            avatar: avatar
+            avatar: avatar,
         };
         try{
             const url = "http://localhost:8000";

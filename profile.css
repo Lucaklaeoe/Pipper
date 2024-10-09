@@ -1,0 +1,26 @@
+.actions{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+    font-family: var(--font);
+}
+.save{
+    background: var(--color_elements);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.save:hover{
+    background: var(--color_elements_hover);
+    cursor: pointer;
+}
+.delete{
+    background: red;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.delete:hover{
+    background: rgb(156, 0, 0);
+    cursor: pointer;
+}
