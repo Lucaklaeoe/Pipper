@@ -50,6 +50,7 @@ async function save(button){
         console.log(error);
     }
 
+    location.reload();  
 }
 
 async function delete_post(button){
