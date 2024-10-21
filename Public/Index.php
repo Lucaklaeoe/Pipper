@@ -66,12 +66,13 @@
             $statement = $conn->prepare($sql);
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            return $results;
         }
         catch(PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+            return "Connection failed: " . $e->getMessage();
         }
 
-        return $results;
     }
 
     //Postdata function
@@ -227,11 +228,11 @@
         try{
             $statement = $conn->prepare($sql);
             $statement->execute();
+            return "post deleted";
         }
         catch(PDOException $e) {
             return "Connection failed: " . $e->getMessage();
         }
 
-        return "post deleted";
     }
 ?>

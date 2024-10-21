@@ -84,6 +84,9 @@ aside ul li{
 aside ul li:hover{
     background: var(--color_standard_hover);
 }
+aside ul li:first-child:hover{
+    background: none;
+}
 aside ul li a{
     text-decoration: none;
     color: var(--text_color);
